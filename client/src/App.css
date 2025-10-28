@@ -1,13 +1,154 @@
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
 }
 
-.card {
-  padding: 2rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  margin-top: 2rem;
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.container > p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.form {
+  margin-bottom: 30px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.url-input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.url-input:focus {
+  border-color: #4CAF50;
+}
+
+.url-input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.submit-btn {
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  padding: 12px 16px;
+  background-color: #fee;
+  border: 1px solid #fcc;
+  border-radius: 6px;
+  color: #c33;
+  margin-bottom: 20px;
+}
+
+.result-card {
+  padding: 24px;
   background-color: #f9f9f9;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+}
+
+.result-card h3 {
+  margin-top: 0;
+  color: #4CAF50;
+  font-size: 18px;
+}
+
+.result-item {
+  margin-bottom: 16px;
+}
+
+.result-item:last-child {
+  margin-bottom: 0;
+}
+
+.result-item label {
+  display: block;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.url-display {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.url-display a {
+  flex: 1;
+  padding: 10px 14px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #0066cc;
+  text-decoration: none;
+  word-break: break-all;
+  font-family: monospace;
+}
+
+.url-display a:hover {
+  background-color: #f5f5f5;
+}
+
+.copy-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background-color: #2196F3;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.copy-btn:hover {
+  background-color: #0b7dda;
+}
+
+.url-text {
+  padding: 10px 14px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #333;
+  word-break: break-all;
+  font-family: monospace;
+  font-size: 14px;
 }
