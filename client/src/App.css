@@ -36,7 +36,7 @@ h1 {
 }
 
 .url-input:focus {
-  border-color: #4CAF50;
+  border-color: #4caf50;
 }
 
 .url-input:disabled {
@@ -49,7 +49,7 @@ h1 {
   font-size: 16px;
   font-weight: 600;
   color: white;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -77,13 +77,13 @@ h1 {
 .result-card {
   padding: 24px;
   background-color: #f9f9f9;
-  border: 2px solid #4CAF50;
+  border: 2px solid #4caf50;
   border-radius: 8px;
 }
 
 .result-card h3 {
   margin-top: 0;
-  color: #4CAF50;
+  color: #4caf50;
   font-size: 18px;
 }
 
@@ -130,7 +130,7 @@ h1 {
   font-size: 14px;
   font-weight: 600;
   color: white;
-  background-color: #2196F3;
+  background-color: #2196f3;
   border: none;
   border-radius: 4px;
   cursor: pointer;

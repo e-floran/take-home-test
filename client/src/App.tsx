@@ -16,11 +16,11 @@ function App() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Reset states
     setError("");
     setResult(null);
-    
+
     // Validation côté client
     if (!url.trim()) {
       setError("Please enter a URL");
@@ -94,11 +94,15 @@ function App() {
       {result && (
         <div className="result-card">
           <h3>✓ URL Shortened Successfully!</h3>
-          
+
           <div className="result-item">
             <label>Short URL:</label>
             <div className="url-display">
-              <a href={result.shortUrl} target="_blank" rel="noopener noreferrer">
+              <a
+                href={result.shortUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {result.shortUrl}
               </a>
               <button onClick={copyToClipboard} className="copy-btn">
