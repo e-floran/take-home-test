@@ -186,6 +186,10 @@ server/src/
 - Fetch API native
 - États gérés : idle, loading, success, error
 - CSS vanilla
+- **React Router** : Gestion du routing pour les URLs raccourcies
+  - Route `/` : Formulaire principal
+  - Route `/:shortCode` : Redirection automatique ou page 404
+  - Amélioration UX : feedback visuel pendant la redirection
 
 ---
 
@@ -208,16 +212,12 @@ server/src/
    - Révèle le nombre total d'URLs créées
    - Production nécessiterait un élément aléatoire
 
-4. **Routing frontend limité** : Aller directement sur `http://localhost:3000/xyz` affiche le formulaire au lieu d'une 404
-   - Les URLs raccourcies fonctionnent quand on clique dessus
-   - Solution production : React Router ou servir le frontend depuis Express
-
 ### Techniques
 
-5. **Pas de persistence** : Redémarrage = perte de données
-6. **Pas de rate limiting** : Vulnérable aux abus
-7. **Pas de validation DNS** : Ne vérifie pas que le domaine existe
-8. **Pas de détection de liens malveillants** : Pas d'intégration avec Google Safe Browsing
+4. **Pas de persistence** : Redémarrage = perte de données
+5. **Pas de rate limiting** : Vulnérable aux abus
+6. **Pas de validation DNS** : Ne vérifie pas que le domaine existe
+7. **Pas de détection de liens malveillants** : Pas d'intégration avec Google Safe Browsing
 
 ---
 
@@ -272,10 +272,9 @@ server/src/
 
 1. **Base de données ** : Migration complète
 2. **Cache Redis** : Pour les redirections
-3. **React Router** : Gérer les 404 frontend correctement
-4. **QR Code** : Générer un QR code pour chaque URL
-5. **API REST complète** : PATCH, DELETE endpoints
-6. **Dashboard analytics** : Graphiques de clics par jour
+3. **QR Code** : Générer un QR code pour chaque URL
+4. **API REST complète** : PATCH, DELETE endpoints
+5. **Dashboard analytics** : Graphiques de clics par jour
 
 ### Long terme (> 1 mois)
 
@@ -288,12 +287,12 @@ server/src/
 
 ## Notes supplémentaires
 
-**Temps de développement** : ~1h30 (conforme à l'estimation)
+**Temps de développement** : ~2h
 
 **Stack utilisée** :
 
 - Backend : Express 5, TypeScript 5, tsx (dev)
-- Frontend : React 19, Vite 7, TypeScript 5
+- Frontend : React 19, Vite 7, TypeScript 5, React Router 6
 - Pas de dépendances externes pour la logique métier (validation native, pas de librairie)
 
 **Points forts de l'implémentation** :
@@ -303,5 +302,6 @@ server/src/
 - Code type-safe avec TypeScript
 - Gestion d'erreurs cohérente
 - Compteur de clics fonctionnel (nice-to-have implémenté)
+- Routing frontend avec React Router (page 404 élégante pour codes inexistants)
 
 **Contact** : Pour toute question, se référer au PROPOSAL.md pour les décisions d'architecture détaillées.
